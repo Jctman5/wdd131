@@ -77,6 +77,9 @@ main h1 {
   border-radius: var(--border-radius);
   padding: 1.5rem;
   box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  gap: 20px; 
 }
 
 .card h2 {
@@ -87,9 +90,9 @@ main h1 {
 }
 
 .card img {
-  width: 120px;
-  border-radius: var(--border-radius);
-  margin: 10px 0;
+  width: 200px; 
+  height: auto;
+  border-radius: 10px;
 }
 
 
