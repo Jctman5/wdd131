@@ -1,0 +1,110 @@
+:root {
+  --primary-color: #234f7a;
+  --accent-color: #333;
+  --highlight-color: #f2c811;
+  --light-bg: #f9f9f9;
+  --text-color: #222;
+  --border-radius: 10px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--text-color);
+  background-color: var(--light-bg);
+  margin: 0;
+  padding: 0;
+}
+
+
+header {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+#course-title {
+  display: block;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+}
+
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: var(--accent-color);
+  padding: 0.5rem 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1.5rem;
+  font-weight: 600;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--highlight-color);
+  border-bottom: 2px solid var(--highlight-color);
+}
+
+
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  text-align: left;
+}
+
+main h1 {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+
+.card {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.card img {
+  width: 120px;
+  border-radius: var(--border-radius);
+  margin: 10px 0;
+}
+
+
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0.4rem 0;
+}
+
+#lastModified {
+  color: var(--highlight-color);
+}
