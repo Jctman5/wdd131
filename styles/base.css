@@ -94,7 +94,22 @@ main h1 {
   height: auto;
   border-radius: 10px;
 }
+.card-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
 
+.card-content img {
+  width: 120px;
+  border-radius: var(--border-radius);
+  flex-shrink: 0;
+}
+
+.card-content p {
+  margin: 0;
+  line-height: 1.5;
+}
 
 footer {
   background-color: var(--primary-color);
