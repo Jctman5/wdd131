@@ -1,0 +1,16 @@
+@media (min-width: 700px) {
+
+  nav {
+    display: flex !important;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  #hamburger {
+    display: none; 
+  }
+
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
