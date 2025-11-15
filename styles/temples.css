@@ -29,9 +29,13 @@ header a {
 }
 
 nav {
-  display: none; 
+  display: flex; 
   flex-direction: column;
   background: var(--primary);
+  visibility: hidden; 
+  height: 0;
+  overflow: hidden;
+  transition: height .3s ease;
 }
 
 nav a:hover {
