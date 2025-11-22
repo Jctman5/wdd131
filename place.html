@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>South Carolina</title>
+	<link rel="stylesheet" href="styles/place.css">
+	<script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+	<header>
+		<h1>South Carolina</h1>
+	</header>
+
+
+	<section class="hero">
+		<picture>
+			<source srcset="images/hero-small.jpg" media="(max-width: 500px)">
+			<source srcset="images/hero-medium.jpg" media="(max-width: 1000px)">
+			<img src="images/hero-large.jpg" alt="Scenic view of the place">
+</picture>
+	</section>
+
+
+	<section class="data">
+		<h2>Data</h2>
+		<ul>
+			<li><span>Area:</span> <span>32,020 sq mi</span></li>
+			<li><span>Population:</span> <span>5,118,425</span></li>
+			<li><span>Capital:</span> <span>Columbia</span></li>
+			<li><span>Language:</span> <span>English Spanish</span></li>
+			<li><span>Time Zone:</span> <span>UTC-5</span></li>
+		</ul>
+	</section>
+
+
+	<section class="weather">
+		<h2>Weather</h2>
+		<img class="weather-icon-mobile" src="images/weather.svg" alt="Weather icon">
+		<ul>
+			<li><span>Temperature:</span> <span id="tempValue">62°F</span></li>
+			<li><span>Wind Speed:</span> <span id="windValue">6 mph</span></li>
+			<li><span>Condition:</span> <span>Sunny</span></li>
+			<li><span>Wind Chill:</span> <span id="windChill">N/A</span></li>
+		</ul>
+	</section>
+
+
+	<footer>
+		<p>&copy; <span id="year"></span> Jackson Taylor | South Carolina</p>
+		<p>Last Modified: <span id="lastModified"></span></p>
+	</footer>
+</body>
+
+</html>
