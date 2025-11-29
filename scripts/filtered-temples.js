@@ -71,28 +71,28 @@ const temples = [
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
   },
   {
-    templeName: "Rome Italy",
-    location: "Rome, Italy",
-    dedicated: "2019, March, 10",
-    area: 41000,
+    templeName: "Bacolod Phillipines",
+    location: "Bacolod Phillipines",
+    dedicated: "2021, December, 11",
+    area: 26700,
     imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/400x250/rome_italy_temple_1.jpeg"
+      "https://churchofjesuschristtemples.org/assets/img/temples/bacolod-philippines-temple/bacolod-philippines-temple-24089-main.jpg"
   },
   {
-    templeName: "Seattle Washington",
-    location: "Bellevue, Washington, United States",
-    dedicated: "1980, November, 17",
-    area: 110000,
+    templeName: "Phoenix Arizona Temple",
+    location: "Phoenix Arizona, United States",
+    dedicated: "2011, October, 1",
+    area: 64870,
     imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/seattle-washington/400x250/seattle_washington_temple_1.jpeg"
+      "https://churchofjesuschristtemples.org/assets/img/temples/phoenix-arizona-temple/phoenix-arizona-temple-12711-main.jpg"
   },
   {
-    templeName: "Anchorage Alaska",
-    location: "Anchorage, Alaska, United States",
-    dedicated: "1999, January, 9",
-    area: 11937,
+    templeName: "Rexburg Idaho",
+    location: "Rexburg, Idaho, United States",
+    dedicated: "2005, July, 30",
+    area: 57504,
     imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/anchorage-alaska/400x250/anchorage_alaska_temple_1.jpeg"
+      "https://churchofjesuschristtemples.org/assets/img/temples/rexburg-idaho-temple/rexburg-idaho-temple-62899-main.jpg"
   }
 ];
 
