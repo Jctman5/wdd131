@@ -1,125 +1,143 @@
-
 document.getElementById("year").textContent = new Date().getFullYear();
 document.getElementById("lastModified").textContent = document.lastModified;
 
 
-
-const hamburger = document.getElementById("hamburger");
+const button = document.getElementById("hamburger");
 const nav = document.getElementById("nav");
 
-hamburger.addEventListener("click", () => {
-  nav.classList.toggle("show");
-  hamburger.textContent = hamburger.textContent === "✖" ? "☰" : "✖";
+button.addEventListener("click", () => {
+  nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+  button.textContent = button.textContent === "✖" ? "☰" : "✖";
 });
-
 
 
 const temples = [
   {
-    name: "Yigo Guam",
-    location: "Yigo, Guam",
-    dedicated: "2022, May, 22",
-    area: 6861,
-    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/yigo-guam-temple/yigo-guam-temple-26495-main.jpg"
+    templeName: "Aba Nigeria",
+    location: "Aba, Nigeria",
+    dedicated: "2005, August, 7",
+    area: 11500,
+    imageUrl:
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg"
   },
   {
-    name: "Washington D.C.",
+    templeName: "Manti Utah",
+    location: "Manti, Utah, United States",
+    dedicated: "1888, May, 21",
+    area: 74792,
+    imageUrl:
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manti-utah/400x250/manti-temple-768192-wallpaper.jpg"
+  },
+  {
+    templeName: "Payson Utah",
+    location: "Payson, Utah, United States",
+    dedicated: "2015, June, 7",
+    area: 96630,
+    imageUrl:
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x225/payson-utah-temple-exterior-1416671-wallpaper.jpg"
+  },
+  {
+    templeName: "Yigo Guam",
+    location: "Yigo, Guam",
+    dedicated: "2020, May, 2",
+    area: 6861,
+    imageUrl:
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/yigo-guam/400x250/yigo_guam_temple_2.jpg"
+  },
+  {
+    templeName: "Washington D.C.",
     location: "Kensington, Maryland, United States",
     dedicated: "1974, November, 19",
     area: 156558,
-    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/washington-d.c.-temple/washington-d.c.-temple-14992-main.jpg"
+    imageUrl:
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg"
   },
   {
-    name: "Lima Perú",
+    templeName: "Lima Perú",
     location: "Lima, Perú",
     dedicated: "1986, January, 10",
     area: 9600,
-    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/lima-peru-temple/lima-peru-temple-12721-main.jpg"
+    imageUrl:
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/lima-peru/400x250/lima-peru-temple-evening-1075606-wallpaper.jpg"
   },
   {
-    name: "Mexico City Mexico",
+    templeName: "Mexico City Mexico",
     location: "Mexico City, Mexico",
     dedicated: "1983, December, 2",
     area: 116642,
-    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/mexico-city-mexico-temple/mexico-city-mexico-temple-4060-main.jpg"
+    imageUrl:
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
   },
+
+
   {
-    name: "Rome Italy",
+    templeName: "Rome Italy",
     location: "Rome, Italy",
     dedicated: "2019, March, 10",
-    area: 40000,
-    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/rome-italy-temple/rome-italy-temple-2642-main.jpg"
+    area: 41000,
+    imageUrl:
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/400x250/rome-italy-temple-lds-2163877-wallpaper.jpg"
   },
   {
-    name: "Seattle Washington",
+    templeName: "Seattle Washington",
     location: "Bellevue, Washington, United States",
     dedicated: "1980, November, 17",
     area: 110000,
-    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/seattle-washington-temple/seattle-washington-temple-55800-main.jpg"
+    imageUrl:
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/seattle-washington/400x250/seattle-temple-lds-930309-wallpaper.jpg"
   },
   {
-    name: "Richmond Virginia",
-    location: "Glen Allen, Virginia, United States",
-    dedicated: "2023, May 7",
-    area: 39202,
-    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/richmond-virginia-temple/richmond-virginia-temple-32557-main.jpg"
-  },
-  {
-    name: "Oakland California",
-    location: "Oakland California",
-    dedicated: "1964, November 17",
-    area: 80157,
-    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/oakland-california-temple/oakland-california-temple-2654-main.jpg"
-  },
-  {
-    name: "Raleigh North Carolina",
-    location: "Raleigh North Carolina",
-    dedicated: "1999, December 18",
-    area: 12864,
-    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/raleigh-north-carolina-temple/raleigh-north-carolina-temple-6727-main.jpg"
+    templeName: "Anchorage Alaska",
+    location: "Anchorage, Alaska, United States",
+    dedicated: "1999, January, 9",
+    area: 11937,
+    imageUrl:
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/anchorage-alaska/400x250/anchorage-alaska-temple-lds-252018-wallpaper.jpg"
   }
-    
 ];
 
+function displayTemples(filteredArray) {
+  const container = document.getElementById("temple-container");
+  container.innerHTML = ""; // Clear previous content
 
-
-const gallery = document.querySelector(".gallery");
-
-function renderTemples(list) {
-  gallery.innerHTML = ""; 
-
-  list.forEach(t => {
-    const card = document.createElement("figure");
+  filteredArray.forEach(t => {
+    const card = document.createElement("div");
+    card.classList.add("temple-card");
 
     card.innerHTML = `
-      <img src="${t.imageUrl}" alt="${t.name}">
-      <figcaption>
-        <h2>${t.name}</h2>
-        <p><strong>Location:</strong> ${t.location}</p>
-        <p><strong>Dedicated:</strong> ${t.dedicated}</p>
-        <p><strong>Area:</strong> ${t.area.toLocaleString()} sq ft</p>
-      </figcaption>
+      <h3>${t.templeName}</h3>
+      <img src="${t.imageUrl}" alt="${t.templeName}" loading="lazy">
+      <p><strong>Location:</strong> ${t.location}</p>
+      <p><strong>Dedicated:</strong> ${t.dedicated}</p>
+      <p><strong>Area:</strong> ${t.area.toLocaleString()} sq ft</p>
     `;
 
-    gallery.appendChild(card);
+    container.appendChild(card);
   });
 }
 
-renderTemples(temples); 
+
+displayTemples(temples);
 
 
+document.querySelectorAll("nav a").forEach(link => {
+  link.addEventListener("click", () => {
+    const filter = link.textContent.trim();
 
-const filters = {
-  all: () => renderTemples(temples),
-  old: () => renderTemples(temples.filter(t => parseInt(t.dedicated) < 1900)),
-  new: () => renderTemples(temples.filter(t => parseInt(t.dedicated) > 2000)),
-  large: () => renderTemples(temples.filter(t => t.area > 90000)),
-  small: () => renderTemples(temples.filter(t => t.area < 10000))
-};
-
-document.querySelectorAll("#filters button").forEach(btn => {
-  btn.addEventListener("click", () => {
-    const type = btn.dataset.filter;
-    filters[type]();
+    if (filter === "Home") {
+      displayTemples(temples);
+    } else if (filter === "Old") {
+      displayTemples(
+        temples.filter(t => parseInt(t.dedicated.split(",")[0]) < 1900)
+      );
+    } else if (filter === "New") {
+      displayTemples(
+        temples.filter(t => parseInt(t.dedicated.split(",")[0]) > 2000)
+      );
+    } else if (filter === "Large") {
+      displayTemples(temples.filter(t => t.area > 90000));
+    } else if (filter === "Small") {
+      displayTemples(temples.filter(t => t.area < 10000));
+    }
   });
 });
