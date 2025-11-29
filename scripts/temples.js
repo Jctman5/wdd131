@@ -61,7 +61,7 @@ const temples = [
 
 
 
-const gallery = document.querySelector(".gallery");
+const gallery = document.querySelector("gallery");
 
 function renderTemples(list) {
   gallery.innerHTML = ""; 
