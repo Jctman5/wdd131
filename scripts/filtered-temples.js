@@ -76,7 +76,7 @@ const temples = [
     dedicated: "2019, March, 10",
     area: 41000,
     imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/400x250/rome-italy-temple-lds-2163877-wallpaper.jpg"
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/400x250/rome_italy_temple_1.jpeg"
   },
   {
     templeName: "Seattle Washington",
@@ -84,7 +84,7 @@ const temples = [
     dedicated: "1980, November, 17",
     area: 110000,
     imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/seattle-washington/400x250/seattle-temple-lds-930309-wallpaper.jpg"
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/seattle-washington/400x250/seattle_washington_temple_1.jpeg"
   },
   {
     templeName: "Anchorage Alaska",
@@ -92,7 +92,7 @@ const temples = [
     dedicated: "1999, January, 9",
     area: 11937,
     imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/anchorage-alaska/400x250/anchorage-alaska-temple-lds-252018-wallpaper.jpg"
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/anchorage-alaska/400x250/anchorage_alaska_temple_1.jpeg"
   }
 ];
 
