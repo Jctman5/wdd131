@@ -1,15 +1,16 @@
-
 document.getElementById("year").textContent = new Date().getFullYear();
 document.getElementById("lastModified").textContent = document.lastModified;
+
 
 
 const button = document.getElementById("hamburger");
 const nav = document.getElementById("nav");
 
 button.addEventListener("click", () => {
-  nav.style.display = nav.style.display === "flex" ? "none" : "flex";
-  button.textContent = button.textContent === "✖" ? "☰" : "✖";
+  nav.classList.toggle("show");
+  button.textContent = nav.classList.contains("show") ? "✖" : "☰";
 });
+
 
 
 const temples = [
@@ -69,7 +70,6 @@ const temples = [
     imageUrl:
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
   },
-
   {
     templeName: "Rome Italy",
     location: "Rome, Italy",
@@ -97,47 +97,51 @@ const temples = [
 ];
 
 
-function displayTemples(filteredArray) {
-  const container = document.getElementById("temple-container");
-  container.innerHTML = "";
 
-  filteredArray.forEach(t => {
-    const card = document.createElement("div");
-    card.classList.add("temple-card");
+function displayTemples(list) {
+  const gallery = document.querySelector(".gallery");
+  gallery.innerHTML = "";
 
-    card.innerHTML = `
-      <h3>${t.templeName}</h3>
+  list.forEach(t => {
+    const figure = document.createElement("figure");
+
+    figure.innerHTML = `
       <img src="${t.imageUrl}" alt="${t.templeName}" loading="lazy">
-      <p><strong>Location:</strong> ${t.location}</p>
-      <p><strong>Dedicated:</strong> ${t.dedicated}</p>
-      <p><strong>Area:</strong> ${t.area.toLocaleString()} sq ft</p>
+      <figcaption>
+        <h2>${t.templeName}</h2>
+        <p><strong>Location:</strong> ${t.location}</p>
+        <p><strong>Dedicated:</strong> ${t.dedicated}</p>
+        <p><strong>Area:</strong> ${t.area.toLocaleString()} sq ft</p>
+      </figcaption>
     `;
 
-    container.appendChild(card);
+    gallery.appendChild(figure);
   });
 }
+
 
 
 displayTemples(temples);
 
 
-document.querySelectorAll("nav a").forEach(link => {
-  link.addEventListener("click", () => {
-    const filter = link.textContent.trim();
 
-    if (filter === "Home") {
+document.querySelectorAll("#filters button").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const filter = btn.dataset.filter;
+
+    if (filter === "all") {
       displayTemples(temples);
-    } else if (filter === "Old") {
-      displayTemples(
-        temples.filter(t => parseInt(t.dedicated.split(",")[0]) < 1900)
-      );
-    } else if (filter === "New") {
-      displayTemples(
-        temples.filter(t => parseInt(t.dedicated.split(",")[0]) > 2000)
-      );
-    } else if (filter === "Large") {
+    }
+    else if (filter === "old") {
+      displayTemples(temples.filter(t => parseInt(t.dedicated.split(",")[0]) < 1900));
+    }
+    else if (filter === "new") {
+      displayTemples(temples.filter(t => parseInt(t.dedicated.split(",")[0]) > 2000));
+    }
+    else if (filter === "large") {
       displayTemples(temples.filter(t => t.area > 90000));
-    } else if (filter === "Small") {
+    }
+    else if (filter === "small") {
       displayTemples(temples.filter(t => t.area < 10000));
     }
   });
