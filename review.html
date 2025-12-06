@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Review Confirmation</title>
+<link rel="stylesheet" href="styles/form.css" />
+</head>
+<body>
+<header>
+<h1>Review Submitted</h1>
+</header>
+
+
+<main>
+<section id="confirmation">
+<h2>Thank you for your review!</h2>
+<p><strong>Product:</strong> <span id="productValue"></span></p>
+<p><strong>Rating:</strong> <span id="ratingValue"></span></p>
+<p><strong>Date of Installation:</strong> <span id="dateValue"></span></p>
+<p><strong>Useful Features:</strong> <span id="featuresValue"></span></p>
+<p><strong>Written Review:</strong> <span id="reviewTextValue"></span></p>
+<p><strong>Your Name:</strong> <span id="usernameValue"></span></p>
+</section>
+
+
+<section id="counterSection">
+<h3>Total Reviews Submitted on This Device:</h3>
+<p id="reviewCounter"></p>
+</section>
+</main>
+
+
+<footer>
+<p>&copy; 2025 | Product Review Assignment</p>
+</footer>
+
+
+<script>
+
+const params = new URLSearchParams(window.location.search);
+
+
+document.getElementById('productValue').textContent = params.get('product');
+document.getElementById('ratingValue').textContent = params.get('rating');
+document.getElementById('dateValue').textContent = params.get('installDate');
+
+
+const features = params.getAll('features');
+document.getElementById('featuresValue').textContent = features.length ? features.join(', ') : 'None selected';
+
+
+document.getElementById('reviewTextValue').textContent = params.get('reviewText') || 'No written review.';
+document.getElementById('usernameValue').textContent = params.get('username') || 'Anonymous';
+
+
+
+let count = Number(localStorage.getItem('reviewCount')) || 0;
+count++;
+localStorage.setItem('reviewCount', count);
+document.getElementById('reviewCounter').textContent = count;
+</script>
+</body>
+</html>
