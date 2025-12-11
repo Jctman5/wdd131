@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Undertow — Contact & Booking</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/project.css">
+  <script defer src="scripts/main.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <a href="index.html" class="logo">UNDERTOW</a>
+      <button id="menuToggle" class="menu-toggle" aria-expanded="false" aria-controls="mainNav">☰</button>
+    </div>
+    <nav id="mainNav" class="main-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="music.html">Music</a></li>
+        <li><a href="shows.html">Shows</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h1>Contact & Booking</h1>
+      <p>Use the booking form below to send event requests. Submissions are saved locally in your browser (localStorage) and shown beneath the form.</p>
+    </section>
+
+    <section class="form-section" aria-label="Booking form">
+      <form id="bookingForm" novalidate>
+        <div class="form-row">
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" required placeholder="Jane Doe">
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required placeholder="you@example.com">
+        </div>
+
+        <div class="form-row">
+          <label for="date">Preferred date</label>
+          <input id="date" name="date" type="date" required>
+        </div>
+
+        <div class="form-row">
+          <label for="venue">Venue / City</label>
+          <input id="venue" name="venue" type="text" required placeholder="City, Venue">
+        </div>
+
+        <div class="form-row">
+          <label for="message">Details</label>
+          <textarea id="message" name="message" rows="4" placeholder="Tell us about the event"></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit">Send Booking Request</button>
+          <button type="button" id="clearStorage">Clear Saved Requests</button>
+        </div>
+      </form>
+
+      <div id="formFeedback" aria-live="polite"></div>
+    </section>
+
+    <section>
+      <h2>Saved Booking Requests (localStorage)</h2>
+      <div id="savedRequests" class="cards-grid">
+        
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year4"></span> Undertow</p>
+    <p><a href="references.html">References & Image Credits</a></p>
+  </footer>
+</body>
+</html>
