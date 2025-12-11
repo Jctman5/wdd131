@@ -2,15 +2,15 @@ document.addEventListener('DOMContentLoaded', init);
 
 
 const tracks = [
-  { id: 't1', title: 'Within Time', length: '3:45', preview: 'audio/track1-demo.mp3' },
-  { id: 't2', title: 'Midnight Flood', length: '4:02', preview: 'audio/track2-demo.mp3' },
-  { id: 't3', title: 'Riptide Dreams', length: '2:58', preview: '' }
+  { id: 't1', title: 'Within Time', length: '5:01', preview: 'audio/track1-demo.mp3' },
+  { id: 't2', title: 'See ya | Demo', length: '3:05', preview: 'audio/track2-demo.mp3' },
+  { id: 't3', title: 'Standby | Demo', length: '1:44', preview: 'audio/track3-demo.mp3' }
 ];
 
 const shows = [
-  { id:'s1', date:'2025-12-20', city:'Asheville, NC', venue:'The Deepwater', soldOut:false, tickets:'https://example.com/tickets1' },
-  { id:'s2', date:'2026-01-15', city:'Portland, OR', venue:'Sound Harbor', soldOut:true, tickets:'' },
-  { id:'s3', date:'2026-02-04', city:'Austin, TX', venue:'StageDive', soldOut:false, tickets:'https://example.com/tickets3' }
+  { id:'s1', date:'01-03-2026', city:'Harrisonburg, VA', venue:'The Warehouse', soldOut:false, tickets:'' },
+  { id:'s2', date:'02-14-2026', city:'Charlottesville, VA', venue:'House show', soldOut:true, tickets:'' },
+  { id:'s3', date:'03-13-2026', city:'Fredericksburg, VA', venue:'Bumrush Vinyl', soldOut:false, tickets:'' }
 ];
 
 const galleryImages = [
@@ -20,7 +20,7 @@ const galleryImages = [
   { id:'g4', src:'images/gallery4-600.jpg', alt:'Backstage' }
 ];
 
-/* --- Initialization --- */
+
 function init(){
   setYearElements();
   setupMenuToggle();
