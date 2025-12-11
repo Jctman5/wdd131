@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Undertow — Shows</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/project.css">
+  <script defer src="scripts/main.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <a href="index.html" class="logo">UNDERTOW</a>
+      <button id="menuToggle" class="menu-toggle" aria-expanded="false" aria-controls="mainNav">☰</button>
+    </div>
+    <nav id="mainNav" class="main-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="music.html">Music</a></li>
+        <li><a href="shows.html" class="active">Shows</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h1>Upcoming Shows</h1>
+      <p>Find show dates, venue details, and availability below. Click a show to expand more info or press "Book" to jump to the booking form.</p>
+    </section>
+
+    <section id="showsList" class="cards-grid" aria-live="polite">
+      
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year3"></span> Undertow</p>
+    <p><a href="references.html">References & Image Credits</a></p>
+  </footer>
+</body>
+</html>
